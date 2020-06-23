@@ -10,7 +10,7 @@ export function* setDecrementAction() {
     yield put({ type: DECREMENT })
 }
 
-export function* setAddAction(payload) {
+export function* setAddAction({payload}) {
     yield put({ type: ADD, payload })
 }
 
