@@ -1,8 +1,13 @@
-import { put} from 'redux-saga/effects'
+import { put, delay} from 'redux-saga/effects'
 import { INCREMENT, DECREMENT, ADD} from '../actionTypes'
 
 
 export function* setIncrementAction() {
+    yield put({ type: INCREMENT })
+}
+
+export function* setIncrementAsyncAction() {
+    yield delay(1000)
     yield put({ type: INCREMENT })
 }
 
